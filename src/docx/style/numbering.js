@@ -37,6 +37,10 @@ class NumberingMap {
         this.map = new Map();
     }
     load(elem){
+        if (!elem) {
+            return
+        }
+
         let abstractNums = elem.findall('w:abstractNum')
         for(let abstractNumElem of abstractNums){
             if (!abstractNumElem.lvl.pStyle)
